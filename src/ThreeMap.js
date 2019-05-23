@@ -2,7 +2,7 @@ import './ThreeMap.css';
 import React, { Component } from 'react';
 import * as THREE from 'three';
 import OBJLoader from './OBJLoader.js';
-
+import OrbitControls from './OrbitControls.js';
 const style={
     position: 'absolute',
     left: 0,
@@ -39,7 +39,7 @@ class ThreeMap extends Component{
             //这里可以修改背景颜色
             renderer.setClearColor(0xffffff);
             //这里实现是否可以控制object的位置、旋转
-            // var controls = new THREE.OrbitControls(camera, renderer.domElement);
+            var controls = new OrbitControls(camera, renderer.domElement);
             //是否可以缩放
             // controls.enableZoom = false;
             //禁止鼠标交互,此处设置为false之后，不能移动位置，不能旋转物体
